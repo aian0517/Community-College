@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>臺北市中正社區大學</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/bootstrap.bundle.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script>
+    function toggleMenu() {
+      document.querySelector('nav').classList.toggle('active');
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="./images/logo.jpg" alt="logo"></a>
+    </div>
+    <span class="menu-btn" onclick="toggleMenu()">☰</span>
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於我們</a>
+      <a href="news.html">最新消息</a>
+      <a href="courses.html">課程資訊</a>
+      <a href="teachers.html">師資介紹</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
+  </header>
+  <div class="banner container-fluid" role="img" aria-label="校園橫幅圖">
+    <div class="row">
+      <div class="col-lg-2 col-12 carousel-title-box">
+        <div>跟我們一起~</div>
+        <div>走進中正社大</div>
+      </div>
+      <div id="carouselExampleFade" class="carousel slide carousel-fade col-lg-10 col-12" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="4000">
+            <img src="./images/中正社大圖.jpg" class="d-block carousel-img" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="./images/575160360_1291715076303341_738245667882225967_n.jpg" class="d-block carousel-img"
+              alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="./images/586012823_1310446774430171_6915008965338243701_n.jpg" class="d-block carousel-img"
+              alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main>
+    <section class="body1">
+      <div class="container p-5 ">
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <h1 class="body1-Title mb-5 pb-3">歡迎來到中正社區大學</h1>
+            <div class="body1-Content ">
+              <p>我們致力於提供社區多元化終身學習課程，從語文、藝術到電腦與健康，歡迎任何年齡層加入我們的共學社群。</p>
+              <ul class="mb-5">
+                <li class="mb-3">多元終身學習課程</li>
+                <li class="mb-3">藝文、生活、數位技能</li>
+                <li class="mb-3">歡迎各年齡層參與</li>
+              </ul>
+              <p>快速連結： <a class="btn me-3" href="courses.html">立即看課程</a> <a class="btn" href="news.html">最新公告</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 df jcc">
+            <div class="body1-imgbox">
+              <img src="./images/zzcc_logo-removebg-preview.png" alt="" class="body1-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="body2">
+      <div class="container-fluid p-5">
+        <div class="row p-5">
+          <h2 class="title mb-5">最新消息</h2>
+          <div class="col-lg-7 col-12 p-2">
+            <section class="body2-cardBox">
+              <div class="body2-card">
+                <div class="body2-card-imgbox mb-4">
+                  <img src="./images/body2/1141212抽獎.png" class="body2-card-img" alt="...">
+                </div>
+                <div>
+                  <h4 class="mb-3 fw">114-2期學員問券抽獎獎品開放領取囉!</h4>
+                  <p class="lep lh">
+                    114-2學員問券抽獎結果已經出爐囉~~<br>
+                    得獎者將獲得精美小禮品一份<br>
+                    領取地點：中正社區大學辦公室<br>
+                    領取期限：即日起至114年12月26日止<br>
+                    領取時間：平日上午10點至晚上8點(不包含國定假日)<br>
+                    中獎名單公告如下<br>
+                    中獎名單：<a
+                      href="https://www.zzcc.tp.edu.tw/images/1142/%E7%B6%B2%E9%A0%81%E5%AE%A3%E5%82%B3%E6%AA%94/114%E5%AD%B8%E5%93%A1%E6%BB%BF%E6%84%8F%E5%BA%A6%E5%95%8F%E5%8D%B7%E8%AA%BF%E6%9F%A5.pdf">請點這</a><br>
+                  </p>
+                </div>
+              </div>
+              <div class="body2-card">
+                <div class="body2-card-imgbox mb-4">
+                  <img src="./images/body2/1141202研習.png" class="body2-card-img" alt="...">
+                </div>
+                <div>
+                  <h4 class="mb-3 fw">114-2期研習證書/教師研習/公務人員學習時數申請</h4>
+                  <p class="lep lh">
+                    研習證書 / 教師研習時數 → <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSeHb6nzQuasFNw9rMkb6V3fAPAxPtS0-k05aMWnWqxUQ7B6Tg/viewform">請點我</a><br>
+                    公務人員終身學習時數 → <a
+                      href="https://www.zzcc.tp.edu.tw/data/%E5%85%AC%E5%8B%99%E4%BA%BA%E5%93%A1%E7%A0%94%E7%BF%92.asp">請點我</a><br>
+                    ※注意事項※<br>
+                    1.申請時間：即日起~115/1/2 止<br>
+                    2.審核標準：出席次數須達14次方可核發研習證書，轉線上課程須待講師提供點名紀錄。<br>
+                    3.領取時間：核製完畢將於本校網頁公告，並請於115/12/31前領取<br>
+                  </p>
+                </div>
+              </div>
+
+            </section>
+          </div>
+          <div class="col-lg-5 col-12 body2-rightbox"></div>
+        </div>
+      </div>
+    </section>
+    <section class="body3">
+      <div class="container-fluid p-5">
+        <div class="row p-5">
+          <h2 class="title">活動宣導</h2>
+          <div class="col-lg-3 col-12">
+            <p class="body3-text">從社區出發，透過活動宣導傳遞重要資訊，陪伴民眾在生活中持續學習與成長</p>
+          </div>
+          <div class="col-lg-9 col-12 swiper mySwiper">
+            <div class="swiper-wrapper body3-cardBox">
+              <!-- <div class="body3-card swiper-slide">
+                    <div>
+                      <img src="" alt="" class="body3-img">
+                    </div>
+                    <div>
+                      <h3>愛滋防治不分性別，珍愛自身健康</h3>
+                      <p class="meta">
+                        愛滋病是由愛滋病毒所引起的疾病。愛滋病毒會破壞人體原本的免疫系統，使病患的身體抵抗力降低，當免疫系統遭到破壞後，原本不會造成生病的病菌，變得有機會感染人類，嚴重時會導致病患死亡。
+                        愛滋病就是後天免疫缺乏症候群（Acquired Immunodeficiency Syndrome，AIDS）的簡稱，就是指因為病患身體抵抗力降低，導致得到各種疾病的症狀。
+                        愛滋病毒為人類免疫缺乏病毒（Human Immunodeficiency Virus, HIV）的簡稱，是一種破壞免疫系統的病毒。</p>
+                      <p>內容簡介：專題講者分享如何將學習化為生活能量。</p>
+                    </div>
+                  </div> -->
+            </div>
+            <div class="swiper-pagination"></div>
+            <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="body4">
+      <div class="container-fluid p-5">
+        <div class="row p-5">
+          <h2 class="title mb-5">關懷失智專區</h2>
+          <div class="col-lg-4">
+            <div class="body4-box">
+              <div class="body4-imgBox">
+                <img src="./images/body4/圖片2.png" alt="" class="body4-img">
+              </div>
+              <div class="body4-Content">
+                <h3 class="mb-3">【ATLife臺灣輔具暨長期照護大展】</h3>
+                <p class="fs-5 lep lh">
+                  輔具，是用於提昇每個人生活品質的產品，以人為核心，支持各種生活面向與功能。此展集結多元輔具產業成員(使用者、業者、專業人員、政府代表等)，以「人的生活」為主軸，打造臺灣輔具專門展
+                  主辦單位：
+                  國立陽明大學ICF暨輔助科技研究中心
+                  展昭國際企業股份有限公司
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="body4-box">
+              <div class="body4-imgBox">
+                <img src="./images/body4/預防失智症.jpg" alt="" class="body4-img">
+              </div>
+              <div class="body4-Content">
+                <h3 class="mb-3">【「認識失智症」衛教宣導資訊】</h3>
+                <p class="fs-5 lep lh">
+                  預防失智症<br><br>
+                  過去一般認為失智症是無藥可醫的，但是近年來對於失智症的治療有許多進展， 當發現出現疑似症狀的徵兆時勿驚慌，並請提早就醫，透過治療改善症狀或是延緩惡化。
+                  詳細資訊：<a href="https://reurl.cc/vnk0bo" target="_blank">https://reurl.cc/vnk0bo</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="body4-box">
+              <div class="body4-imgBox">
+                <img src="./images/body4/友善社區.jpg" alt="" class="body4-img">
+              </div>
+              <div class="body4-Content">
+                <h3 class="mb-3">【守護記憶 友善社區】</h3>
+                <p class="fs-5 lep lh">
+                  臺北市5階段推動「失智友善組織」
+                  中正社區大學認同失智友善理念， 簽署失智合作備忘錄並於組織內適當位置放置相關資源宣導單張。希冀未來失智症者在熟悉友善環境中，安心與安全的生活！
+                  相關資訊可至<a href="tada2002.org.tw/About/About/11" target="_blank">臺灣失智症協會</a>瀏覽
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">臺北市中正社區大學 © 2025 • 地址：臺北市中正區濟南路一段六號.• 服務專線：(02)2327-8441</footer>
+  <a href="#top" class="top">
+    ⬆
+    <img src="./images/你的段落文字.png" alt="" class="top-img">
+  </a>
+  <script src="./js/index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>最新消息 - 中正社大</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/new.css">
+  <script>
+    function toggleMenu() {
+      document.querySelector('nav').classList.toggle('active');
+    }
+  ///////////////////////////
+    function toggleMenu() {
+      document.querySelector('nav').classList.toggle('active');
+    }
+    
+    // 輪播功能
+    document.addEventListener('DOMContentLoaded', function() {
+      const carousel = document.querySelector('.carousel');
+      const items = document.querySelectorAll('.carousel-item');
+      const dots = document.querySelectorAll('.dot');
+      const prevBtn = document.querySelector('.prev-btn');
+      const nextBtn = document.querySelector('.next-btn');
+      
+      let currentIndex = 0;
+      const totalItems = items.length;
+      
+      // 更新輪播位置
+      function updateCarousel() {
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // 更新指示點
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === currentIndex);
+        });
+      }
+      
+      // 下一張
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateCarousel();
+      }
+      
+      // 上一張
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        updateCarousel();
+      }
+      
+      // 點擊指示點
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          currentIndex = index;
+          updateCarousel();
+        });
+      });
+      
+      // 按鈕事件
+      prevBtn.addEventListener('click', prevSlide);
+      nextBtn.addEventListener('click', nextSlide);
+      
+      // 自動輪播
+      let autoSlide = setInterval(nextSlide, 5000);
+      
+      // 滑鼠懸停時暫停自動輪播
+      const carouselContainer = document.querySelector('.carousel-container');
+      carouselContainer.addEventListener('mouseenter', () => {
+        clearInterval(autoSlide);
+      });
+      
+      carouselContainer.addEventListener('mouseleave', () => {
+        autoSlide = setInterval(nextSlide, 5000);
+      });
+      
+      // 觸控滑動支援
+      let startX = 0;
+      let endX = 0;
+      
+      carouselContainer.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+      });
+      
+      carouselContainer.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        handleSwipe();
+      });
+      
+      function handleSwipe() {
+        const diff = startX - endX;
+        
+        if (Math.abs(diff) > 50) { // 最小滑動距離
+          if (diff > 0) {
+            nextSlide(); // 向左滑動，下一張
+          } else {
+            prevSlide(); // 向右滑動，上一張
+          }
+        }
+      }
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="./images/logo.jpg" alt="logo"></a>
+    </div>
+    <span class="menu-btn" onclick="toggleMenu()">☰</span>
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於我們</a>
+      <a href="news.html">最新消息</a>
+      <a href="courses.html">課程資訊</a>
+      <a href="teachers.html">師資介紹</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
+  </header>
+  
+  <main class="container">
+    <h2 class="title">最新消息</h2>
+    
+    <!-- 圖片輪播區 -->
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1532094349884-543bc11b234d');">
+          <div class="carousel-caption">
+            <h4>【114-2學期課程招生中】</h4>
+            <p>多樣化課程任您選擇，歡迎報名參加</p>
+          </div>
+        </div>
+        <div class="carousel-item" style="
+            background-image: url('./images/1141212抽獎.png'); 
+            background-size: contain; 
+            background-color: #f0f4fa;
+            background-position: center;
+          ">
+          <div class="carousel-caption">
+            <h4>114-2學員問券抽獎結果已經出爐囉~~</h4>
+            <p>得獎者將獲得精美小禮品一份</p>
+          </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+          <div class="carousel-caption">
+            <h4>校園志工招募</h4>
+            <p>歡迎熱心民眾加入志工行列，服務社區</p>
+          </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+          <div class="carousel-caption">
+            <h4>社區成果展回顧</h4>
+            <p>學員精彩作品展示，感謝各界參與</p>
+          </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+          <div class="carousel-caption">
+            <h4>教師研習工作坊</h4>
+            <p>提升教學品質，持續精進教學方法</p>
+          </div>
+        </div>
+      </div>
+      
+      <button class="carousel-btn prev-btn">‹</button>
+      <button class="carousel-btn next-btn">›</button>
+      
+      <div class="carousel-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+    
+    <div class="card clickable-card" onclick="location.href='courses.html'">
+      <h3>📌 114-2 課程開放報名</h3>
+      <p class="meta">報名期間：2025/06/01 - 2025/06/30</p>
+      <p>線上報名請至課程頁面或洽服務台。</p>
+      <a href="./courses.html" class="card-link">查看詳細課程資訊與報名方式 ›</a>
+    </div>
+
+    <div class="card clickable-card" onclick="location.href='activity.html'">
+      <h3>【我們與資訊的距離：媒體素養入門五堂課】開始報名囉!</h3>
+      <p class="meta">報名期間：2025/06/01 - 2025/06/30</p>
+      <p>線上報名請至課程頁面或洽服務台。</p>
+      <a href="activity.html" class="card-link">查看詳細課程資訊與報名方式 ›</a>
+    </div>
+    
+    <div class="card clickable-card" onclick="location.href='survey-result.html'">
+      <h3>114-2學員問券抽獎結果已經出爐囉~~</h3>
+      <p class="meta">領取期限：2025/07/15</p>
+      <p>得獎者將獲得精美小禮品一份</p>
+      <a href="survey-result.html" class="card-link">查看詳細結果與領取方式 ›</a>
+    </div>
+
+    <div class="card clickable-card">
+      <h3>📌 校園志工招募中</h3>
+      <p class="meta">招募期限：2025/07/15</p>
+      <p>歡迎熱心的社區民眾加入，一同協助活動執行。</p>
+    </div>
+    
+    <div class="card clickable-card">
+      <h3>📌 活動花絮：社區成果展</h3>
+      <p class="meta">2025/05/20 活動回顧</p>
+      <p>感謝參與學員及所有志工的付出，成果豐碩。</p>
+    </div>
+  </main>
+  
+  <footer class="footer">中正社區大學 © 2025</footer>
+</body>
+</html>

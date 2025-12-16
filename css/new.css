@@ -1,0 +1,180 @@
+/* 輪播樣式 */
+.carousel-container {
+    margin: 30px auto;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 300px;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.carousel-caption {
+    background: rgba(30, 74, 146, 0.85);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: calc(100% - 40px);
+}
+
+.carousel-caption h4 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+
+.carousel-caption p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    background: white;
+    transform: scale(1.2);
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .carousel-container {
+    height: 250px;
+    }
+    
+    .carousel {
+    height: 250px;
+    }
+    
+    .carousel-caption h4 {
+    font-size: 16px;
+    }
+    
+    .carousel-caption p {
+    font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+    height: 200px;
+    }
+    
+    .carousel {
+    height: 200px;
+    }
+    
+    .carousel-caption {
+    padding: 10px;
+    }
+    
+    .carousel-caption h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    }
+}
+  
+
+/*survey-result*/
+/* 可點擊卡片樣式 */
+.clickable-card {
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.clickable-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border-left: 4px solid #1e4a92;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #1e4a92;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+
+.card-link:hover {
+  color: #163b70;
+  text-decoration: underline;
+}
+
+/* 小箭頭動畫效果 */
+.card-link::after {
+  content: '›';
+  margin-left: 5px;
+  transition: transform 0.3s;
+  display: inline-block;
+}
+
+.card-link:hover::after {
+  transform: translateX(3px);
+}

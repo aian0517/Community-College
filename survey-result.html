@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>問卷抽獎結果 - 中正社大</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/new.css">
+  <style>
+    /* 詳細頁面專用樣式 */
+    .result-container {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 3px 14px rgba(0,0,0,0.08);
+      margin: 30px auto;
+      max-width: 900px;
+    }
+    
+    .result-title {
+      color: #1e4a92;
+      border-bottom: 2px solid #1e4a92;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+    }
+    
+    .winner-list {
+      background: #f8fafd;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    
+    .winner-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px dashed #ddd;
+    }
+    
+    .winner-item:last-child {
+      border-bottom: none;
+    }
+    
+    .prize-info {
+      background: linear-gradient(135deg, #f0f7ff, #e1ecff);
+      border-left: 4px solid #1e4a92;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 25px 0;
+    }
+    
+    .prize-info h4 {
+      color: #1e4a92;
+      margin-top: 0;
+    }
+    
+    .claim-info {
+      background: #fff8e1;
+      border: 1px solid #ffd54f;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 25px 0;
+    }
+    
+    .claim-info h4 {
+      color: #e65100;
+      margin-top: 0;
+    }
+    
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #f0f4fa;
+      color: #1e4a92;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    
+    .back-link:hover {
+      background: #1e4a92;
+      color: white;
+    }
+    
+    .badge {
+      display: inline-block;
+      background: #1e4a92;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin-left: 10px;
+      font-weight: 500;
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      document.querySelector('nav').classList.toggle('active');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="./images/logo.jpg" alt="logo"></a>
+    </div>
+    <span class="menu-btn" onclick="toggleMenu()">☰</span>
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於我們</a>
+      <a href="news.html">最新消息</a>
+      <a href="courses.html">課程資訊</a>
+      <a href="teachers.html">師資介紹</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
+  </header>
+  
+  <main class="container">
+    <h2 class="title">114-2學員問卷抽獎結果</h2>
+    
+    <div class="result-container">
+      <h3 class="result-title">問卷抽獎結果公告 <span class="badge">領取期限：2025/07/15</span></h3>
+      
+      <div class="winner-list">
+        <h4>🏆 得獎名單</h4>
+        <div class="winner-item">
+          <span>特等獎：智慧型手機</span>
+          <strong>學員編號：S2025001</strong>
+        </div>
+        <div class="winner-item">
+          <span>頭等獎：平板電腦</span>
+          <strong>學員編號：S2025034</strong>
+        </div>
+        <div class="winner-item">
+          <span>一等獎：無線耳機</span>
+          <strong>學員編號：S2025078</strong>
+        </div>
+        <div class="winner-item">
+          <span>二等獎：行動電源</span>
+          <strong>學員編號：S2025112</strong>
+        </div>
+        <div class="winner-item">
+          <span>三等獎：精美文具組</span>
+          <strong>學員編號：S2025125、S2025133、S2025147</strong>
+        </div>
+      </div>
+      
+      <div class="prize-info">
+        <h4>🎁 獎品內容說明</h4>
+        <p><strong>特等獎：</strong>最新款智慧型手機（價值$15,000）</p>
+        <p><strong>頭等獎：</strong>10吋平板電腦（價值$8,000）</p>
+        <p><strong>一等獎：</strong>高音質無線藍牙耳機（價值$2,500）</p>
+        <p><strong>二等獎：</strong>10000mAh快充行動電源（價值$800）</p>
+        <p><strong>三等獎：</strong>設計師款文具組（價值$300）</p>
+      </div>
+      
+      <div class="claim-info">
+        <h4>📝 領取注意事項</h4>
+        <p><strong>領取期限：</strong>即日起至2025年7月15日（週二）下午5:00前</p>
+        <p><strong>領取時間：</strong>週一至週五 09:00-17:00，週六 09:00-12:00</p>
+        <p><strong>領取地點：</strong>中正社區大學行政辦公室（一樓服務台）</p>
+        <p><strong>必備文件：</strong>請攜帶學員證及身份證件以供核對</p>
+        <p><strong>注意事項：</strong></p>
+        <ul>
+          <li>得獎者須本人親自領取，恕不接受代領</li>
+          <li>逾期未領取者，視同放棄得獎資格</li>
+          <li>獎品以實物為準，主辦單位保留更換等值獎品之權利</li>
+          <li>如有任何疑問，請洽服務台 (02)1234-5678</li>
+        </ul>
+      </div>
+      
+      <div class="contact-info">
+        <h4>📞 聯絡資訊</h4>
+        <p>中正社區大學行政辦公室</p>
+        <p>電話：(02)1234-5678</p>
+        <p>電子郵件：cccu@example.edu.tw</p>
+        <p>地址：台北市中正區忠孝東路一段100號</p>
+      </div>
+      
+      <a href="news.html" class="back-link">← 回最新消息列表</a>
+    </div>
+  </main>
+  
+  <footer class="footer">中正社區大學 © 2025</footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>師資介紹 - 中正社大</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script>function toggleMenu() { document.querySelector('nav').classList.toggle('active'); }</script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="./images/logo.jpg" alt="logo"></a>
+        </div>
+        <span class="menu-btn" onclick="toggleMenu()">☰</span>
+        <nav>
+            <a href="index.html">首頁</a>
+            <a href="about.html">關於我們</a>
+            <a href="news.html">最新消息</a>
+            <a href="courses.html">課程資訊</a>
+            <a href="teachers.html">師資介紹</a>
+            <a href="contact.html">聯絡我們</a>
+        </nav>
+    </header>
+    <main class="container">
+        <h2 class="title">師資介紹</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="teacher1.jpg" alt="王小明"
+                    style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+                <h3>王小明老師</h3>
+                <p class="meta">課程：英文會話</p>
+                <p>專長：口語教學、成人教育經驗豐富。</p>
+            </div>
+            <div class="card">
+                <img src="teacher2.jpg" alt="林佳儀"
+                    style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+                <h3>林佳儀老師</h3>
+                <p class="meta">課程：水彩、素描</p>
+                <p>專長：視覺藝術工作坊與展覽策劃。</p>
+            </div>
+            <div class="card">
+                <img src="teacher3.jpg" alt="陳老師"
+                    style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+                <h3>陳老師</h3>
+                <p class="meta">課程：網頁設計</p>
+                <p>專長：前端開發與教學，喜歡把複雜變簡單。</p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">中正社區大學 © 2025</footer>
+</body>
+
+</html>
