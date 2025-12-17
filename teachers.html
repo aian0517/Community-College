@@ -5,8 +5,201 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>師資介紹 - 中正社大</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <script>function toggleMenu() { document.querySelector('nav').classList.toggle('active'); }</script>
+    <link rel="icon" href="./images/biglogo_png.png">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .transparent-image-container {
+            width: 100%;
+            height: 200px;
+            margin: 20px 0 30px 0;
+            position: relative;
+            overflow: hidden;
+            border-radius: 14px;
+            background: white;
+            box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .transparent-image-container:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        .transparent-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+            border-radius: 14px;
+        }
+
+        .transparent-image-container:hover .transparent-image {
+            opacity: 0.9;
+        }
+
+        .category-filter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+            padding: 20px 0;
+            border-radius: 14px;
+            background: white;
+            box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+        }
+
+        .category-item {
+            padding: 10px 25px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            color: #666;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .category-item:hover {
+            color: #1e4a92;
+            background-color: #f0f4fa;
+        }
+
+        .category-item.active {
+            color: #1e4a92;
+            background-color: #e3f2fd;
+            box-shadow: 0 2px 8px rgba(30, 74, 146, 0.2);
+        }
+
+        .category-separator {
+            color: #ddd;
+            font-size: 20px;
+            font-weight: 300;
+            padding: 0 5px;
+        }
+
+        .teachers-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px;
+            transition: all 0.4s ease;
+        }
+
+        .teacher-card {
+            flex: 1 0 calc(50% - 18px);
+            max-width: calc(50% - 18px);
+            min-width: 300px;
+            transition: all 0.4s ease;
+        }
+
+        .teachers-container.two-teachers .teacher-card {
+            flex: 1 0 calc(50% - 18px);
+            max-width: calc(50% - 18px);
+        }
+
+        .teachers-container.one-teacher .teacher-card {
+            flex: 0 0 auto;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .teacher-card.hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 900px) {
+            .teacher-card {
+                flex: 1 0 calc(50% - 18px);
+                max-width: calc(50% - 18px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .transparent-image-container {
+                height: 150px;
+            }
+
+            .category-filter {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .category-separator {
+                display: none;
+            }
+
+            .category-item {
+                width: 80%;
+                text-align: center;
+            }
+
+            .teacher-card {
+                flex: 1 0 100%;
+                max-width: 100%;
+                min-width: auto;
+            }
+
+            .teachers-container.two-teachers .teacher-card {
+                flex: 1 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .transparent-image-container {
+                height: 120px;
+            }
+
+            .category-item {
+                font-size: 16px;
+                padding: 8px 20px;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            document.querySelector('nav').classList.toggle('active');
+        }
+
+        function filterTeachers(category) {
+            document.querySelectorAll('.category-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            const teachers = document.querySelectorAll('.teacher-card');
+            const container = document.querySelector('.teachers-container');
+            let visibleCount = 0;
+
+            teachers.forEach(teacher => {
+                const teacherCategory = teacher.getAttribute('data-category');
+
+                if (category === 'all') {
+                    teacher.classList.remove('hidden');
+                    visibleCount++;
+                } else if (teacherCategory === category) {
+                    teacher.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    teacher.classList.add('hidden');
+                }
+            });
+
+            container.classList.remove('two-teachers', 'one-teacher');
+
+            if (category === 'all') {
+                container.classList.add('default-layout');
+            } else if (visibleCount === 1) {
+                container.classList.add('one-teacher');
+            } else if (visibleCount === 2) {
+                container.classList.add('two-teachers');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.category-item[onclick="filterTeachers(\'all\')"]').classList.add('active');
+        });
+    </script>
 </head>
 
 <body>
@@ -19,38 +212,71 @@
             <a href="index.html">首頁</a>
             <a href="about.html">關於我們</a>
             <a href="news.html">最新消息</a>
-            <a href="courses.html">課程資訊</a>
+            <a href="./courses.html">課程資訊</a>
             <a href="teachers.html">師資介紹</a>
             <a href="contact.html">聯絡我們</a>
         </nav>
     </header>
     <main class="container">
         <h2 class="title">師資介紹</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="teacher1.jpg" alt="王小明"
-                    style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+
+        <div class="transparent-image-container">
+            <img src="./images/tbanner.jpg" alt="師資團隊背景" class="transparent-image"
+                onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'background:#1e4a92; color:white; padding:40px; text-align:center; border-radius:10px;\'>圖片載入失敗</div>'">
+        </div>
+
+        <div class="category-filter">
+            <div class="category-item active" onclick="filterTeachers('all')">全部師資</div>
+            <span class="category-separator">|</span>
+            <div class="category-item" onclick="filterTeachers('language')">語文類</div>
+            <span class="category-separator">|</span>
+            <div class="category-item" onclick="filterTeachers('art')">藝術類</div>
+            <span class="category-separator">|</span>
+            <div class="category-item" onclick="filterTeachers('computer')">電腦與技能</div>
+        </div>
+
+        <div class="teachers-container">
+            <div class="card teacher-card" data-category="language">
                 <h3>王小明老師</h3>
                 <p class="meta">課程：英文會話</p>
-                <p>專長：口語教學、成人教育經驗豐富。</p>
+                <p>專長：具備紮實英文教學經驗，善於引導聽說讀寫整合學習，提升學生理解力、表達能力與實際溝通應用成效。
+                    。</p>
+                <div class="tag"
+                    style="background:#e8f5e9; color:#2e7d32; display:inline-block; padding:3px 10px; border-radius:12px; font-size:13px; margin-top:8px;">
+                    語文類</div>
             </div>
-            <div class="card">
-                <img src="teacher2.jpg" alt="林佳儀"
-                    style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+
+            <div class="card teacher-card" data-category="art">
                 <h3>林佳儀老師</h3>
                 <p class="meta">課程：水彩、素描</p>
-                <p>專長：視覺藝術工作坊與展覽策劃。</p>
+                <p>專長：熟悉水彩層次與色彩表現，並具扎實素描基礎，能精準掌握比例、結構與光影，呈現細膩且具表現力的畫面。
+                    。</p>
+                <div class="tag"
+                    style="background:#fff3e0; color:#f57c00; display:inline-block; padding:3px 10px; border-radius:12px; font-size:13px; margin-top:8px;">
+                    藝術類</div>
             </div>
-            <div class="card">
-                <img src="teacher3.jpg" alt="陳老師"
-                    style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+
+            <div class="card teacher-card" data-category="computer">
                 <h3>陳老師</h3>
                 <p class="meta">課程：網頁設計</p>
-                <p>專長：前端開發與教學，喜歡把複雜變簡單。</p>
+                <p>專長：熟悉網頁設計與前端技術，重視使用者體驗與版面美感，能將需求轉化為實用、穩定且具視覺吸引力的網站。
+                    。</p>
+                <div class="tag"
+                    style="background:#e3f2fd; color:#1e4a92; display:inline-block; padding:3px 10px; border-radius:12px; font-size:13px; margin-top:8px;">
+                    電腦與技能</div>
+            </div>
+
+            <div class="card teacher-card" data-category="art">
+                <h3>張老師</h3>
+                <p class="meta">課程：攝影</p>
+                <p>專長：擅長構圖、光影與色彩掌握，能精準捕捉關鍵瞬間情感，呈現影像故事性，讓作品具有高度感染力與視覺張力。</p>
+                <div class="tag"
+                    style="background:#fff3e0; color:#f57c00; display:inline-block; padding:3px 10px; border-radius:12px; font-size:13px; margin-top:8px;">
+                    藝術類</div>
             </div>
         </div>
     </main>
-    <footer class="footer">中正社區大學 © 2025</footer>
+    <footer class="footer">臺北市中正社區大學 © 2025 • 地址：臺北市中正區濟南路一段六號.• 服務專線：(02)2327-8441</footer>
 </body>
 
 </html>

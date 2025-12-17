@@ -5,56 +5,289 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>聯絡我們 - 中正社大</title>
-    <link rel="stylesheet" href="./css/contact.css">
-    <script>function toggleMenu() { document.querySelector('nav').classList.toggle('active'); }</script>
+    <link rel="icon" href="./images/biglogo_png.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-bottom: 25px;
+        }
+
+        .contact-info-card {
+            background: white;
+            padding: 18px 20px;
+            border-radius: 14px;
+            box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+            text-align: center;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-info-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        .contact-icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #1e4a92;
+        }
+
+        .contact-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1e4a92;
+            margin-bottom: 8px;
+        }
+
+        .contact-detail {
+            font-size: 15px;
+            line-height: 1.4;
+            color: #333;
+        }
+
+        .contact-detail p {
+            margin: 5px 0;
+        }
+
+        form label {
+            display: block;
+            margin: 12px 0 5px 0;
+            font-weight: 600;
+            color: #333;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #bbb;
+            font-size: 15px;
+            transition: border 0.3s;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            outline: none;
+            border-color: #1e4a92;
+            box-shadow: 0 0 0 2px rgba(30, 74, 146, 0.1);
+        }
+
+        .form-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .btn-clear {
+            display: inline-block;
+            padding: 10px 25px;
+            background: #f0f0f0;
+            color: #666;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .btn-clear:hover {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .map-container {
+            margin-top: 25px;
+        }
+
+        .map-iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .btn-submit{
+            display: inline-block;
+            padding: 10px 25px;
+            background: #1e4a92;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            font-size: 15px;
+            opacity: 0.8;
+        }
+        .btn-submit:hover{
+            opacity: 1;
+        }
+        @media (max-width: 768px) {
+            .contact-info-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .contact-info-card {
+                padding: 15px 18px;
+                min-height: 110px;
+            }
+
+            .contact-icon {
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+
+            .contact-title {
+                font-size: 17px;
+            }
+
+            .map-iframe {
+                height: 350px;
+            }
+
+            .form-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn,
+            .btn-clear {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-info-card {
+                padding: 12px 15px;
+                min-height: 100px;
+            }
+
+            .contact-icon {
+                font-size: 22px;
+            }
+
+            .contact-title {
+                font-size: 16px;
+            }
+
+            .contact-detail {
+                font-size: 14px;
+            }
+
+            .map-iframe {
+                height: 300px;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            document.querySelector('nav').classList.toggle('active');
+        }
+
+        function clearForm() {
+            document.querySelector('form').reset();
+        }
+    </script>
 </head>
 
 <body>
     <header>
-        <div class="logo">
-            <a href="index.html"><img src="./images/logo.jpg" alt="logo"></a>
-        </div>
-        <span class="menu-btn" onclick="toggleMenu()">☰</span>
-        <nav>
-            <a href="index.html">首頁</a>
-            <a href="about.html">關於我們</a>
-            <a href="news.html">最新消息</a>
-            <a href="courses.html">課程資訊</a>
-            <a href="teachers.html">師資介紹</a>
-            <a href="contact.html">聯絡我們</a>
-        </nav>
-    </header>
+    <div class="logo">
+      <a href="index.html"><img src="./images/logo.jpg" alt="logo"></a>
+    </div>
+    <span class="menu-btn" onclick="toggleMenu()">☰</span>
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於我們</a>
+      <a href="news.html">最新消息</a>
+      <a href="./courses.html">課程資訊</a>
+      <a href="teachers.html">師資介紹</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
+  </header>
     <main class="container">
-        <h2 class="title">聯絡我們</h2>
-        <div class="card">
-            <form onsubmit="alert('送出成功') ; reset();">
-                <label>姓名：</label>
-                <input type="text" required>
 
+        <h2 class="title">聯絡我們</h2>
+
+        <div class="card mb-2">
+            <h3 style="color:#1e4a92; margin-bottom:15px; font-size:20px;">聯絡資訊</h3>
+
+            <div class="contact-info-grid">
+                <div class="contact-info-card">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-title">電話</div>
+                    <div class="contact-detail">
+                        <p><strong>(02)23278441</strong></p>
+                        <p style="font-size:13px; color:#666;">週一至週五 10:00-20:00</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-title">地址</div>
+                    <div class="contact-detail">
+                        <p><strong>100臺北市中正區濟南路一段6號</strong></p>
+                        <p style="font-size:13px; color:#666;">交通便利，鄰近捷運站</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-2">
+            <h3 style="color:#1e4a92; margin-bottom:15px; font-size:20px;">聯絡表單</h3>
+
+            <form onsubmit="alert('表單已送出!'); reset();">
+                <label>姓名：</label>
+                <input type="text" placeholder="請輸入您的姓名" required>
 
                 <label>Email：</label>
-                <input type="email" required>
+                <input type="email" placeholder="請輸入您的電子郵件" required>
 
+                <label>聯絡電話：</label>
+                <input type="tel" placeholder="請輸入您的聯絡電話">
 
                 <label>留言內容：</label>
-                <textarea rows="5" required></textarea>
+                <textarea rows="5" placeholder="請輸入您的問題或建議..." required></textarea>
 
-
-                <button class="btn" type="reset">清除</button>
-                <button class="btn" type="submit">送出</button>
+                <div class="form-buttons">
+                    <button class="btn-clear" type="button" onclick="clearForm()">清除</button>
+                    <button class="btn-submit" type="submit">送出</button>
+                </div>
             </form>
         </div>
 
+        <h2 class="title" style="margin-top:30px;">地圖</h2>
 
-        <h2 class="title">地址與地圖</h2>
-        <div class="card">
-            <p class="meta">地址：臺北市中正區濟南路一段六號.</p>
+        <div class="card map-container">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.754028259214!2d121.5218211!3d25.0424202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9713a60fa8d%3A0x1326fc6ecf411e35!2z6Ie65YyX5biC5Lit5q2j56S-5Y2A5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1765882645083!5m2!1szh-TW!2stw"
-                width="100%" height="260" style="border:0; border-radius:8px;"></iframe>
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7540289132585!2d121.51924617537675!3d25.042420177810904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9713a60fa8d%3A0x1326fc6ecf411e35!2z6Ie65YyX5biC5Lit5q2j56S-5Y2A5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1765912556122!5m2!1szh-TW!2stw"
+                class="map-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <div style="margin-top:15px; padding:12px; background:#f8fafd; border-radius:6px;">
+                <p style="font-size:13px; color:#666; margin:0; text-align:center;">
+                    <strong>地址：</strong>100臺北市中正區濟南路一段6號
+                </p>
+            </div>
         </div>
+
     </main>
-    <footer class="footer">臺北市中正社區大學 © 2025 • 地址：臺北市中正區濟南路一段六號.• 服務專線：(02)2327-8441</footer>
+  <footer class="footer">臺北市中正社區大學 © 2025 • 地址：臺北市中正區濟南路一段六號.• 服務專線：(02)2327-8441</footer>
 </body>
 
 </html>

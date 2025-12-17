@@ -5,19 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>臺北市中正社區大學</title>
+  <link rel="icon" href="./images/biglogo_png.png">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/index.css">
   <script src="./js/bootstrap.bundle.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <script>
-    function toggleMenu() {
-      document.querySelector('nav').classList.toggle('active');
-    }
-  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
-<body>
+<body class="no-scroll">
+  <section class="load">
+    <div class="loadImg"></div>
+  </section>
   <header>
     <div class="logo">
       <a href="index.html"><img src="./images/logo.jpg" alt="logo"></a>
@@ -27,16 +28,15 @@
       <a href="index.html">首頁</a>
       <a href="about.html">關於我們</a>
       <a href="news.html">最新消息</a>
-      <a href="courses.html">課程資訊</a>
+      <a href="./courses.html">課程資訊</a>
       <a href="teachers.html">師資介紹</a>
       <a href="contact.html">聯絡我們</a>
     </nav>
   </header>
   <div class="banner container-fluid" role="img" aria-label="校園橫幅圖">
     <div class="row">
-      <div class="col-lg-2 col-12 carousel-title-box">
-        <div>跟我們一起~</div>
-        <div>走進中正社大</div>
+      <div class="col-lg-2 col-12 carousel-title-box" >
+        <div class="carousel-title"></div>
       </div>
       <div id="carouselExampleFade" class="carousel slide carousel-fade col-lg-10 col-12" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -59,7 +59,7 @@
     <section class="body1">
       <div class="container p-5 ">
         <div class="row">
-          <div class="col-lg-6 col-12">
+          <div class="col-lg-6 col-12 " data-aos="fade-right">
             <h1 class="body1-Title mb-5 pb-3">歡迎來到中正社區大學</h1>
             <div class="body1-Content ">
               <p>我們致力於提供社區多元化終身學習課程，從語文、藝術到電腦與健康，歡迎任何年齡層加入我們的共學社群。</p>
@@ -68,12 +68,12 @@
                 <li class="mb-3">藝文、生活、數位技能</li>
                 <li class="mb-3">歡迎各年齡層參與</li>
               </ul>
-              <p>快速連結： <a class="btn me-3" href="courses.html">立即看課程</a> <a class="btn" href="news.html">最新公告</a>
+              <p>快速連結： <a class="btn me-3" href="./courses.html">立即看課程</a> <a class="btn" href="news.html">最新公告</a>
               </p>
             </div>
           </div>
           <div class="col-lg-6 col-12 df jcc">
-            <div class="body1-imgbox">
+            <div class="body1-imgbox " data-aos="fade-left">
               <img src="./images/zzcc_logo-removebg-preview.png" alt="" class="body1-img">
             </div>
           </div>
@@ -83,9 +83,9 @@
     <section class="body2">
       <div class="container-fluid p-5">
         <div class="row p-5">
-          <h2 class="title mb-5">最新消息</h2>
+          <h2 class="title mb-5 " data-aos="fade-right">最新消息</h2>
           <div class="col-lg-7 col-12 p-2">
-            <section class="body2-cardBox">
+            <section class="body2-cardBox " data-aos="fade-up-right">
               <div class="body2-card">
                 <div class="body2-card-imgbox mb-4">
                   <img src="./images/body2/1141212抽獎.png" class="body2-card-img" alt="...">
@@ -125,18 +125,19 @@
 
             </section>
           </div>
-          <div class="col-lg-5 col-12 body2-rightbox"></div>
+          <div class="col-lg-5 col-12 body2-rightbox" data-aos="fade-up-left">
+          </div>
         </div>
       </div>
     </section>
     <section class="body3">
       <div class="container-fluid p-5">
         <div class="row p-5">
-          <h2 class="title">活動宣導</h2>
-          <div class="col-lg-3 col-12">
+          <h2 class="title" data-aos="fade-right">活動宣導</h2>
+          <div class="col-lg-3 col-12" data-aos="fade-right">
             <p class="body3-text">從社區出發，透過活動宣導傳遞重要資訊，陪伴民眾在生活中持續學習與成長</p>
           </div>
-          <div class="col-lg-9 col-12 swiper mySwiper">
+          <div class="col-lg-9 col-12 swiper mySwiper" data-aos="zoom-in-left">
             <div class="swiper-wrapper body3-cardBox">
               <!-- <div class="body3-card swiper-slide">
                     <div>
@@ -162,8 +163,8 @@
     <section class="body4">
       <div class="container-fluid p-5">
         <div class="row p-5">
-          <h2 class="title mb-5">關懷失智專區</h2>
-          <div class="col-lg-4">
+          <h2 class="title mb-5" data-aos="fade-right">關懷失智專區</h2>
+          <div class="col-lg-4" data-aos="zoom-in">
             <div class="body4-box">
               <div class="body4-imgBox">
                 <img src="./images/body4/圖片2.png" alt="" class="body4-img">
@@ -179,7 +180,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4" data-aos="zoom-in">
             <div class="body4-box">
               <div class="body4-imgBox">
                 <img src="./images/body4/預防失智症.jpg" alt="" class="body4-img">
@@ -194,7 +195,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4" data-aos="zoom-in">
             <div class="body4-box">
               <div class="body4-imgBox">
                 <img src="./images/body4/友善社區.jpg" alt="" class="body4-img">
@@ -204,7 +205,7 @@
                 <p class="fs-5 lep lh">
                   臺北市5階段推動「失智友善組織」
                   中正社區大學認同失智友善理念， 簽署失智合作備忘錄並於組織內適當位置放置相關資源宣導單張。希冀未來失智症者在熟悉友善環境中，安心與安全的生活！
-                  相關資訊可至<a href="tada2002.org.tw/About/About/11" target="_blank">臺灣失智症協會</a>瀏覽
+                  相關資訊可至<a href="http://www.tada2002.org.tw/About/About11.aspx" target="_blank">臺灣失智症協會</a>瀏覽
                 </p>
               </div>
             </div>
@@ -219,6 +220,12 @@
     ⬆
     <img src="./images/你的段落文字.png" alt="" class="top-img">
   </a>
+   <script>
+    function toggleMenu() {
+      document.querySelector('nav').classList.toggle('active');
+    }
+    AOS.init();
+  </script>
   <script src="./js/index.js"></script>
 
 </body>

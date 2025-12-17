@@ -5,68 +5,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>課程資訊 - 中正社大</title>
+    <link rel="icon" href="./images/biglogo_png.png">
     <link rel="stylesheet" href="./css/style.css">
     <script>function toggleMenu() { document.querySelector('nav').classList.toggle('active'); }</script>
 </head>
 
 <body>
     <header>
-        <div class="logo">
-            <a href="index.html"><img src="./images/logo.jpg" alt="logo"></a>
-        </div>
-        <span class="menu-btn" onclick="toggleMenu()">☰</span>
-        <nav>
-            <a href="index.html">首頁</a>
-            <a href="about.html">關於我們</a>
-            <a href="news.html">最新消息</a>
-            <a href="courses.html">課程資訊</a>
-            <a href="teachers.html">師資介紹</a>
-            <a href="contact.html">聯絡我們</a>
-        </nav>
-    </header>
+    <div class="logo">
+      <a href="index.html"><img src="./images/logo.jpg" alt="logo"></a>
+    </div>
+    <span class="menu-btn" onclick="toggleMenu()">☰</span>
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於我們</a>
+      <a href="news.html">最新消息</a>
+      <a href="./courses.html">課程資訊</a>
+      <a href="teachers.html">師資介紹</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
+  </header>
     <main class="container">
         <h2 class="title">課程資訊</h2>
         <p class="small">請篩選您想報名的課程類別或查看各課程詳細資料。</p>
 
 
-        <h3 class="title" style="border-left:8px solid #1e4a92; padding-left:12px; font-size:20px; margin-top:20px;">語文類
-        </h3>
-        <div class="card">
-            <h4>英文會話入門</h4>
-            <p class="meta">每週三 19:00 - 21:00 | 王小明老師 | NT$1500</p>
-            <p>適合初學者。</p>
-            <p><a class="btn" href="#">線上報名</a></p>
-        </div>
+        <h3 class="title" style="border-left:8px solid #1e4a92; padding-left:12px; font-size:20px; margin-top:20px;">
+  語文類
+</h3>
+
+<div class="grid">
+  <!-- 語文課程 1 -->
+  <div class="card">
+    <h4>英文文法入門(七)</h4>
+    <p class="meta">每週一 上午 09:30 起 | 王品清老師 | NT$3150</p>
+    <p>
+      第五期課程，利用重複與老師和同學之間練習，達到能了解簡單的英文句子結構，建立信心。（適合零基礎）難易度: ★★★★☆☆☆☆☆☆
+    </p>
+    <p>
+      <a class="btn" href="https://www.cccc.tp.edu.tw/class/lookup.asp?CourseNo=F2G101">
+        線上報名
+      </a>
+    </p>
+  </div>
+
+  <!-- 語文課程 2 -->
+  <div class="card">
+    <h4>日本語進階(一)</h4>
+    <p class="meta">每週五 下午 13:30起 | 吳秀蓮老師 | NT$3100</p>
+    <p>
+      在輕鬆活潑的氣氛下，透過基本的句型，自然學會日常生活會話，了解日本的文化、民俗風情。
+    </p>
+    <p>
+      <a class="btn" href="https://www.cccc.tp.edu.tw/class/lookup.asp?CourseNo=F2G511">
+        線上報名
+      </a>
+    </p>
+  </div>
+
+  <!-- 語文課程 3 -->
+  <div class="card">
+    <h4>★快樂學韓語-入門發音</h4>
+    <p class="meta">每週五 晚上 19:00起 | 吳京燕老師 | NT$3650</p>
+    <p>
+      全世界最容易學習、也最科學化的韓國字母，透過圖像記憶法來學習韓語，說明韓語的發音規則、及文法結構，再循序漸進地帶入日常生活用語。讓學員能看懂、聽懂、並且能唸出韓語，同時還會搭配教唱韓劇歌曲，讓學習韓語成為一種樂趣。有系統的整合式學習法，練習聽說讀寫四大能力。 1. 在輕鬆的情境下開口說韓語，透過獨特的圖像式記憶法，搭配生動活潑的情境教學。 2. 在快樂的氛圍下，讓學習韓語是一種優質的享受。
+    </p>
+    <p>
+      <a class="btn" href="https://www.cccc.tp.edu.tw/class/lookup.asp?CourseNo=F2G516">
+        線上報名
+      </a>
+    </p>
+  </div>
+
+  <!-- 語文課程 4 -->
+  <div class="card">
+    <h4>生活法語(二)</h4>
+    <p class="meta">每週二 晚上 19:00起 | 王玲琇老師 | NT$3000</p>
+    <p>
+      本課程的教學理念是協助已具備基礎法文能力的學員，透過法文檢定試題的練習，統合聽說讀寫與綜合運用5大能力。讓對法語有興趣的成人學習者能夠活用法語進行相當於CEFR A1等級的會話溝通。
+    </p>
+    <p>
+      <a class="btn" href="https://www.cccc.tp.edu.tw/class/lookup.asp?CourseNo=F2G218">
+        線上報名
+      </a>
+    </p>
+  </div>
+
+
+  <!-- 語文課程 5 -->
+  <div class="card">
+    <h4>跟著西班牙語去旅行(六)</h4>
+    <p class="meta">每週二 上午 09:30起 | 林姿吟老師 | NT$3000</p>
+    <p>
+      本課程延續先前所學，在既有的詞彙語法基礎下學習不同的時態變化。同時，也透過不同的單元情境，使同學熟悉西語觀光會話，實際應用在旅途中。
+    </p>
+    <p>
+      <a class="btn" href="https://www.cccc.tp.edu.tw/class/lookup.asp?CourseNo=F2G207">
+        線上報名
+      </a>
+    </p>
+  </div>
+
+
+
+</div>
 
 
         <h3 class="title" style="border-left:8px solid #1e4a92; padding-left:12px; font-size:20px; margin-top:20px;">藝術類
         </h3>
         <div class="grid">
             <div class="card">
-                <h4>水彩與素描</h4>
-                <p class="meta">每週六 09:00 - 12:00 | 林佳儀老師 | NT$1800</p>
-                <p>實作為主，材料自備。</p>
-                <p><a class="btn" href="#">線上報名</a></p>
+                <h4>粉彩、水彩基礎</h4>
+                <p class="meta">每週三 晚上 19:00起 | 曾孝德老師 | NT$4500</p>
+                <p>循序漸進規劃適合各階級學習，從描繪開始學習，務求基礎紮實再進一步創作。</p>
+                <p><a class="btn" href="https://www.cccc.tp.edu.tw/class/lookup.asp?CourseNo=F2H307">線上報名</a></p>
             </div>
             <div class="card">
-                <h4>攝影入門</h4>
-                <p class="meta">每週日 10:00 - 12:00 | 張老師 | NT$1600</p>
-                <p>手機與入門相機教學。</p>
-                <p><a class="btn" href="#">線上報名</a></p>
+                <h4>手機攝影台北趴趴走</h4>
+                <p class="meta">每週一 上午 09:30起 | 洪志傑老師 | NT$3000</p>
+                <p>課程將以輕鬆淺顯易懂的實際操作，讓您了解手機與相機攝影光圈、快門、色調、光影、構圖比例的關係與差異性及使用技巧並融會貫通，讓您運用在周遭生活上，隨時隨地捕捉在地人文特色、風景，創造不同視野。</p>
+                <p><a class="btn" href="https://www.cccc.tp.edu.tw/class/lookup.asp?CourseNo=F2F101">線上報名</a></p>
             </div>
         </div>
 
 
         <h3 class="title" style="border-left:8px solid #1e4a92; padding-left:12px; font-size:20px; margin-top:20px;">
-            電腦與技能</h3>
-        <div class="card">
-            <h4>基礎網頁設計</h4>
-            <p class="meta">每週日 14:00 - 17:00 | 陳老師 | NT$2000</p>
-            <p>從 HTML/CSS 到簡單互動。</p>
-            <p><a class="btn" href="#">線上報名</a></p>
-        </div>
+  電腦與技能
+</h3>
+
+<div class="grid">
+  <!-- 電腦與技能 1 -->
+  <div class="card">
+    <h4>居家水電維修DIY</h4>
+    <p class="meta">每週二 下午 13:30起 | 曾光山老師 | NT$4000</p>
+    <p>
+      現代家庭中水與電是不可缺少的，經由分析水電器具之構造原理，配合實際器具拆解，再由學員實際操作，具備基本裝配及故障維修技能
+    </p>
+    <p>
+      <a class="btn" href="https://www.cccc.tp.edu.tw/class/lookup.asp?CourseNo=F2B201">
+        線上報名
+      </a>
+    </p>
+  </div>
+
+  <!-- 電腦與技能 2 -->
+  <div class="card">
+    <h4>Python輕鬆入門</h4>
+    <p class="meta">每週三 下午 13:30起 | 蔡勝雄老師 | NT$4000</p>
+    <p>
+      透過簡單的範例讓學生可以快速理解語法的意義與用法，善用小練習提昇學生整合運用語法完成目標之能力。 最終了解python基本使用方法及概念
+    </p>
+    <p>
+      <a class="btn" href="https://www.cccc.tp.edu.tw/class/lookup.asp?CourseNo=F2F302">
+        線上報名
+      </a>
+    </p>
+  </div>
+
+  <!-- 電腦與技能 3 -->
+  <div class="card">
+    <h4>家庭水電維修DIY</h4>
+    <p class="meta">每週四 晚上 19:00起 | 陳幸墩老師 | NT$4000</p>
+    <p>
+      本課程為實作課程，會從水電基本原理講解、老師示範、同學練習，藉由上課基本原理講解與實際操作後，必可學會家中基本之水電維修，不需再看水電師父臉色。
+    </p>
+    <p>
+      <a class="btn" href="https://www.cccc.tp.edu.tw/class/lookup.asp?CourseNo=F2B404">
+        線上報名
+      </a>
+    </p>
+  </div>
+</div>
     </main>
-    <footer class="footer">中正社區大學 © 2025</footer>
+  <footer class="footer">臺北市中正社區大學 © 2025 • 地址：臺北市中正區濟南路一段六號.• 服務專線：(02)2327-8441</footer>
 </body>
 
 </html>

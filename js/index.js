@@ -2,6 +2,43 @@ const body3_cardBox = document.querySelector('.body3-cardBox')
 const body2_rightBox = document.querySelector('.body2-rightbox')
 const topB = document.querySelector('.top')
 
+setTimeout(() => {
+    document.querySelector('.load').classList.add('remove')
+    document.querySelector('body').classList.remove('no-scroll')
+}, 1100);
+
+
+const target = document.querySelector('.carousel-title')
+
+const texts = [
+  '跟我們一起\n走進中山社大',
+  '學習\n讓生活更精彩',
+  '學習不設限\n成長就在你身邊'
+]
+
+let textIndex = 0
+let charIndex = 0
+
+function typeLoop() {
+  if (charIndex < texts[textIndex].length) {
+    target.textContent += texts[textIndex][charIndex]
+    charIndex++
+    setTimeout(typeLoop, 150)
+  } else {
+    setTimeout(() => {
+      target.textContent = ''
+      charIndex = 0
+      textIndex = (textIndex + 1) % texts.length
+      typeLoop()
+    }, 2000)
+  }
+}
+setTimeout(() => {
+    typeLoop()
+}, 1200);
+
+
+
 window.addEventListener('scroll', () => {
   const windowscrollY= window.scrollY
 
@@ -34,7 +71,6 @@ const body2_data = [
         img: "./images/body2/3.png"
     },
 ]
-
 body2_data.forEach((value) => {
     body2_rightBox.innerHTML += `
     <div class="body2-rightCard">
@@ -47,7 +83,9 @@ body2_data.forEach((value) => {
         </div>
     </div>
     `
+    body2_rightBox.prepend()
 })
+body2_rightBox.innerHTML +=`<div class="body2-rightBtnBox"><a href="./news.html" class="body2-rightBtn btn">查看更多</a></div>`
 
 const body3data = [
     {
@@ -61,7 +99,7 @@ const body3data = [
         title: "【社團法人高雄市女性權益促進會宣導活動】",
         text: `高雄女權會長期耕耘社區教育、教材研發與各類性別意識培力課程等，期望陪伴民眾在日常生活中落實性別平等。
                 以期透過各種節日介紹與過節經驗，反思傳統習俗中的性別議題，認識多元型態的家庭與節日經驗。
-                相關影片：https://reurl.cc/lDZ95v`,
+                相關影片：<a href="https://reurl.cc/lDZ95v">https://reurl.cc/lDZ95v</a>`,
         img: "./images/Activity/多元家庭來過節.jpg",
     },
     {
@@ -77,19 +115,19 @@ const body3data = [
     {
         title: "臺北市教育局套書電子檔",
         text: `(一)「讓教育成為城市的榮耀系列」網址：
-                https://reurl.cc/zr1q00（教育局網首頁/公告資訊/相關報告/臺北市教育施政成果）
+                <a href="https://reurl.cc/zr1q00">https://reurl.cc/zr1q00</a>（教育局網首頁/公告資訊/相關報告/臺北市教育施政成果）
                 (二)「臺北市教育政策系列」網址：
-                https://reurl.cc/4XrL2v（教育局網首頁/公告資訊/白皮書專區）`,
+                <a href="https://reurl.cc/4XrL2v">https://reurl.cc/4XrL2v</a>（教育局網首頁/公告資訊/白皮書專區）`,
         img: "./images/Activity/讓教育成為城市的榮耀.png",
     },
     {
         title: "臺北市勞動檢查處宣導短片",
         text: `為提升勞工職業安全衛生意識，北市勞動處111年針對『臨軌作業安全』製作二支數位教材：
                 (1)一般作業人員例行性安全(片長31分)
-                https://reurl.cc/Yv25MX
+                <a href="https://reurl.cc/Yv25MX">https://reurl.cc/Yv25MX</a>
 
                 (2)臨軌施工安全(片長31分18秒)
-                https://reurl.cc/yrpj1E`,
+                <a href="https://reurl.cc/yrpj1E">https://reurl.cc/yrpj1E</a>`,
         img: "./images/Activity/勞動檢查處_臨軌作業安全.gif",
     },
 ]
@@ -101,8 +139,8 @@ body3data.forEach((value) => {
           <img src="${value.img}" alt="" class="body3-img">
         </div>
         <div>
-          <h3>${value.title}</h3>
-          <p class="meta">${value.text}</p>
+          <h3 class="fw mb-4">${value.title}</h3>
+          <p class="meta pe-5 fs-6">${value.text}</p>
         </div>
       </div>
       `
