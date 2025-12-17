@@ -219,61 +219,109 @@
     </header>
     <main class="container">
         <h2 class="title">師資介紹</h2>
+        <div class="grid">
 
-        <div class="transparent-image-container">
-            <img src="./images/tbanner.jpg" alt="師資團隊背景" class="transparent-image"
-                onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'background:#1e4a92; color:white; padding:40px; text-align:center; border-radius:10px;\'>圖片載入失敗</div>'">
-        </div>
-
-        <div class="category-filter">
-            <div class="category-item active" onclick="filterTeachers('all')">全部師資</div>
-            <span class="category-separator">|</span>
-            <div class="category-item" onclick="filterTeachers('language')">語文類</div>
-            <span class="category-separator">|</span>
-            <div class="category-item" onclick="filterTeachers('art')">藝術類</div>
-            <span class="category-separator">|</span>
-            <div class="category-item" onclick="filterTeachers('computer')">電腦與技能</div>
-        </div>
-
-        <div class="teachers-container">
-            <div class="card teacher-card" data-category="language">
-                <h3>王小明老師</h3>
-                <p class="meta">課程：英文會話</p>
-                <p>專長：具備紮實英文教學經驗，善於引導聽說讀寫整合學習，提升學生理解力、表達能力與實際溝通應用成效。
-                    。</p>
-                <div class="tag"
-                    style="background:#e8f5e9; color:#2e7d32; display:inline-block; padding:3px 10px; border-radius:12px; font-size:13px; margin-top:8px;">
-                    語文類</div>
+     <!-- teacher1 -->
+            <div class="card">
+                <img src="./images/teachers/teacher1_0.png" alt="王品清"
+                    style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+                <h3>王品清老師</h3>
+                <p class="meta">課程：英文文法</p>
+                <p>講師學歷：Oklahoma City University</p>
+  <p>講師經歷：1.臺北市高職英文老師、補習班英文會話老師 2.臺北市中正社區大學英文會話老師 3.美國ELS英文會話老師</p>
             </div>
 
-            <div class="card teacher-card" data-category="art">
-                <h3>林佳儀老師</h3>
-                <p class="meta">課程：水彩、素描</p>
-                <p>專長：熟悉水彩層次與色彩表現，並具扎實素描基礎，能精準掌握比例、結構與光影，呈現細膩且具表現力的畫面。
-                    。</p>
-                <div class="tag"
-                    style="background:#fff3e0; color:#f57c00; display:inline-block; padding:3px 10px; border-radius:12px; font-size:13px; margin-top:8px;">
-                    藝術類</div>
+     <!-- teacher2 -->
+            <div class="card">
+                <img src="./images/teachers/teacher2_0.png" alt="吳秀蓮"
+                    style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+                <h3>吳秀蓮老師</h3>
+                <p class="meta">課程：日本語</p>
+                <p>講師學歷：日本私立聖和大學</p>
+  <p>講師經歷：現任： 臺北市中正社區大學日語課程教師 YMCA台灣基督教青年協會日語教師 曾任： 高中職第二外語教師 華航新進空服員日語教師 臺鐵北投員工訓練中心日語教師</p>
             </div>
 
-            <div class="card teacher-card" data-category="computer">
-                <h3>陳老師</h3>
-                <p class="meta">課程：網頁設計</p>
-                <p>專長：熟悉網頁設計與前端技術，重視使用者體驗與版面美感，能將需求轉化為實用、穩定且具視覺吸引力的網站。
-                    。</p>
-                <div class="tag"
-                    style="background:#e3f2fd; color:#1e4a92; display:inline-block; padding:3px 10px; border-radius:12px; font-size:13px; margin-top:8px;">
-                    電腦與技能</div>
+     <!-- teacher3 -->
+            <div class="card">
+                <img src="./images/teachers/teacher3_0.png" alt="吳京燕"
+                    style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+                <h3>吳京燕老師</h3>
+                <p class="meta">課程：韓語</p>
+                <p>講師學歷：文化大學</p>
+  <p>講師經歷：臺北市中山社大 韓語講師 新北市勞工大學 韓語講師 中原大學推廣處 韓語講師</p>
             </div>
 
-            <div class="card teacher-card" data-category="art">
-                <h3>張老師</h3>
+       <!-- teacher4 -->
+            <div class="card">
+                <img src="./images/teachers/teacher4_0.jpg" alt="王玲琇"
+                    style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+                <h3>王玲琇老師</h3>
+                <p class="meta">課程：法語</p>
+                <p>講師學歷：比利時魯汶大學教育心理學系碩士</p>
+  <p>講師經歷：現任國立東華大學通識中心法文講師。講師證號-講字第102935號。曾任新聞局資料編譯處法文組編譯。1997年起，兼任法文口筆譯工作，譯著約三十部。</p>
+            </div>
+
+       <!-- teacher5 -->
+            <div class="card">
+                <img src="./images/teachers/teacher5.jpg" alt="林姿吟"
+                    style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+                <h3>林姿吟老師</h3>
+                <p class="meta">課程：西班牙語</p>
+                <p>講師學歷：輔仁大學</p>
+  <p>講師經歷：國立臺北教育大學通識中心兼任講師、輔仁大學推廣部兼任講師、雙北市高中第二外語課程兼任講師</p>
+            </div>
+
+
+       <!-- teacher6 -->
+            <div class="card">
+                <img src="./images/teachers/teacher6.png" alt="曾孝德"
+                    style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+                <h3>曾孝德老師</h3>
+                <p class="meta">課程：粉彩、水彩</p>
+                <p>講師學歷：國立台灣師範大學美術系研究所</p>
+  <p>講師經歷：1.國立臺灣藝術大學美術系、書畫系講師 2.臺陽美術協會、中華民國油畫協會理事及美展評審、專業畫家 3.臺北縣文化局美術家作品、臺中縣文化局展覽、全國百號油畫美展、雙和美展、苗栗美展…等評審委員 4.獲得全國美展金龍獎、台陽美展金牌獎、全省美展第二名、教育部文藝創作獎…等，國內外美術館、文化中心、畫廊舉辦油畫個展23次。</p>
+            </div>
+
+       <!-- teacher7 -->
+            <div class="card">
+                <img src="./images/teachers/teacher7.png" alt="洪志傑"
+                    style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+                <h3>洪志傑老師</h3>
                 <p class="meta">課程：攝影</p>
-                <p>專長：擅長構圖、光影與色彩掌握，能精準捕捉關鍵瞬間情感，呈現影像故事性，讓作品具有高度感染力與視覺張力。</p>
-                <div class="tag"
-                    style="background:#fff3e0; color:#f57c00; display:inline-block; padding:3px 10px; border-radius:12px; font-size:13px; margin-top:8px;">
-                    藝術類</div>
+                <p>講師學歷：英國中英格蘭大學 伯明翰視覺傳達研究所攝影碩士</p>
+  <p>講師經歷：現任萬能科技大學商設系講師、中華攝影藝術交流學會秘書長。</p>
             </div>
+
+       <!-- teacher8 -->
+            <div class="card">
+                <img src="./images/teachers/teacher8_0.png" alt="曾光山"
+                    style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+                <h3>曾光山老師</h3>
+                <p class="meta">課程：水電維修</p>
+                <p>講師學歷：臺北市松山工農</p>
+  <p>講師經歷：現任松山社大、南港社大、萬華社大、北投社大、信義社大、中正社大居家水電維修DIY講師</p>
+            </div>
+
+       <!-- teacher9 -->
+            <div class="card">
+                <img src="./images/teachers/teacher9_0.jpg" alt="蔡勝雄"
+                    style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+                <h3>蔡勝雄老師</h3>
+                <p class="meta">課程：Python</p>
+                <p>講師學歷：中正大學</p>
+  <p>講師經歷：1.萬華社大、文山社大、新莊社大 電腦老師 2.國際專案管理師(PMP)認證 3.台北、新北救國團及青年服務社 電腦老師</p>
+            </div>
+
+       <!-- teacher10 -->
+            <div class="card">
+                <img src="./images/teachers/teacher10_0.jpg" alt="陳幸墩"
+                    style="width:100%; height:160px; object-fit:cover; border-radius:10px;">
+                <h3>陳幸墩老師</h3>
+                <p class="meta">課程：水電維修</p>
+                <p>講師學歷：國立臺北工專</p>
+  <p>講師經歷：國立台北工專電機科,現任永和、文山社區大學居家水電維修DIY講師，曾任職於大同公司、南亞塑膠公司、中鼎工程等公司從事水電、空調、消防設計、施工及維修42年並取得甲種電匠、乙種電匠、室內配線乙級技術士、避難系統消防安全設備乙級技術、暫行消防設備士等專業證照。</p>
+            </div>
+
         </div>
     </main>
     <footer class="footer">臺北市中正社區大學 © 2025 • 地址：臺北市中正區濟南路一段六號.• 服務專線：(02)2327-8441</footer>
